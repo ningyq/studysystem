@@ -1,39 +1,19 @@
 package com.lrrnn.studysystem.bean;
 
+import lombok.Data;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
+@Data
 public class College {
 
     @Id
-    @GeneratedValue
-    private int collegeId;
-    private String collegeName;
-    private int countryId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private  long collegeId;
 
-    public int getCollegeId() {
-        return collegeId;
-    }
-
-    public void setCollegeId(int collegeId) {
-        this.collegeId = collegeId;
-    }
-
-    public String getCollegeName() {
-        return collegeName;
-    }
-
-    public void setCollegeName(String collegeName) {
-        this.collegeName = collegeName;
-    }
-
-    public int getCountryId() {
-        return countryId;
-    }
-
-    public void setCountryId(int countryId) {
-        this.countryId = countryId;
-    }
+    private  String collegeName;
 }

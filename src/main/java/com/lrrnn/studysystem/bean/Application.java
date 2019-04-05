@@ -1,84 +1,33 @@
 package com.lrrnn.studysystem.bean;
 
+import lombok.Data;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
+@Data
 public class Application {
 
     @Id
-    @GeneratedValue
-    private int applicationId;
-    private String applyName;
-    private String applyPhone;
-    private int countryId;
-    private int collegeId;
-    private int specialtyId;
-    private String applyContent;
-    private int applicationStatus;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private  long applicationId;
 
-    public int getApplicationId() {
-        return applicationId;
-    }
+    private  String applyName;
 
-    public void setApplicationId(int applicationId) {
-        this.applicationId = applicationId;
-    }
+    private  String applyPhone;
 
-    public String getApplyName() {
-        return applyName;
-    }
+    private  long countryId;
 
-    public void setApplyName(String applyName) {
-        this.applyName = applyName;
-    }
+    private  long collegeId;
 
-    public String getApplyPhone() {
-        return applyPhone;
-    }
+    private  long specialtyId;
 
-    public void setApplyPhone(String applyPhone) {
-        this.applyPhone = applyPhone;
-    }
+    private  String applyContent;
 
-    public int getCountryId() {
-        return countryId;
-    }
+    private  int applicationStatus;
 
-    public void setCountryId(int countryId) {
-        this.countryId = countryId;
-    }
-
-    public int getCollegeId() {
-        return collegeId;
-    }
-
-    public void setCollegeId(int collegeId) {
-        this.collegeId = collegeId;
-    }
-
-    public int getSpecialtyId() {
-        return specialtyId;
-    }
-
-    public void setSpecialtyId(int specialtyId) {
-        this.specialtyId = specialtyId;
-    }
-
-    public String getApplyContent() {
-        return applyContent;
-    }
-
-    public void setApplyContent(String applyContent) {
-        this.applyContent = applyContent;
-    }
-
-    public int getApplicationStatus() {
-        return applicationStatus;
-    }
-
-    public void setApplicationStatus(int applicationStatus) {
-        this.applicationStatus = applicationStatus;
-    }
+    private  long userInfoId;
 }

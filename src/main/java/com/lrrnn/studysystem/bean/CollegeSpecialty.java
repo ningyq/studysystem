@@ -9,11 +9,13 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class Specialty {
+public class CollegeSpecialty {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  long specialtyId;
+    private long collegeSpecialtyId;
 
-    private  String specialtyName;
+    private long collegeId;
+
+    private long specialtyId;
 }
